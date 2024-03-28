@@ -8,6 +8,9 @@ import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
 import AdminLogin from './pages/AdminLogin'
 import AdminModule from './module/AdminModule'
+import Add from './module/Add'
+import View from './module/View'
+import Edit from './module/Edit'
 
 function App() {
 
@@ -27,6 +30,9 @@ function App() {
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/admin-login' element={<AdminLogin />} />
         <Route path='/admin' element={<AdminModule/>} />
+        <Route path='/admin/add' element={<Add/>} />
+        <Route path='/admin/view' element={<View/>} />
+        <Route path='/admin/edit/:id' element={<Edit/>} />
       </Routes>
       {!isAdminPage && <Footer />}
 
